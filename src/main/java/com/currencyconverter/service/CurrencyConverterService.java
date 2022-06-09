@@ -1,6 +1,6 @@
-package com.example.demo.service;
+package com.currencyconverter.service;
 
-import com.example.demo.model.ExchangeModel;
+import com.currencyconverter.model.ExchangeModel;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cache.CacheManager;
@@ -22,8 +22,8 @@ public class CurrencyConverterService {
     private String ACCESS_KEY;
     private final String BASE_URL = "https://api.apilayer.com/";
     private final CacheManager cacheManager;
-    @Cacheable("currentcycache")
-    public ExchangeModel currencyConverter(String to,String from,String amount) {
+    @Cacheable("currencycache")
+    public ExchangeModel currencyConverter(String to, String from, String amount) {
         RestTemplate restTemplate = new RestTemplate();
         HttpHeaders headers = new HttpHeaders();
         headers.add("apikey", ACCESS_KEY);
@@ -39,7 +39,7 @@ public class CurrencyConverterService {
 
     @Scheduled(fixedRate = 60*1000)
     public void clearcache(){
-    Objects.requireNonNull(cacheManager.getCache("currentcycache")).clear();
+    Objects.requireNonNull(cacheManager.getCache("currencycache")).clear();
 
     }
 }

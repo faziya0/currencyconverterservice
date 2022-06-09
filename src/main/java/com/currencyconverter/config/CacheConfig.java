@@ -1,4 +1,4 @@
-package com.example.demo.config;
+package com.currencyconverter.config;
 
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.EnableCaching;
@@ -12,7 +12,7 @@ public class CacheConfig {
     @Bean
     public
     CacheManager cacheManager(){
-        return new ConcurrentMapCacheManager("currentcycache");
+        return new ConcurrentMapCacheManager("currencycache");
 
     }
 }

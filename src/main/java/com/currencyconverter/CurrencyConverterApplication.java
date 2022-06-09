@@ -1,13 +1,13 @@
-package com.example.demo;
+package com.currencyconverter;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DemospringcacheprojectApplication {
+public class CurrencyConverterApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DemospringcacheprojectApplication.class, args);
+		SpringApplication.run(CurrencyConverterApplication.class, args);
 	}
 
 }

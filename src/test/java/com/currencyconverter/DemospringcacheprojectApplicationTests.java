@@ -1,10 +1,10 @@
-package com.example.demo;
+package com.currencyconverter;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DemospringcacheprojectApplicationTests {
+class CurrencyConverterApplication {
 
 	@Test
 	void contextLoads() {

@@ -1,7 +1,7 @@
-package com.example.demo.controller;
+package com.currencyconverter.controller;
 
-import com.example.demo.model.ExchangeModel;
-import com.example.demo.service.CurrencyConverterService;
+import com.currencyconverter.model.ExchangeModel;
+import com.currencyconverter.service.CurrencyConverterService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
